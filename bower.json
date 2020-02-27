@@ -1,6 +1,6 @@
 {
   "name": "collected.autoloader",
-  "version": "1.0.1",
+  "version": "1.0.7",
   "main": "",
   "ignore": [
     "source",
