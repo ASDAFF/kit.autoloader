@@ -3,11 +3,11 @@
  * Copyright (c) 28/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_CONNECT_JQUERY"] = "Подключение JQuery";
-$MESS['COLLECTED_AUTOLOADER_OPTIONS_HOW_TO_LAUNCH'] = '
+$MESS["KIT_AUTOLOADER_OPTIONS_CONNECT_JQUERY"] = "Подключение JQuery";
+$MESS['KIT_AUTOLOADER_OPTIONS_HOW_TO_LAUNCH'] = '
 <strong>Настройка модуля</strong><br /><br />
 При установке автоматически генерируется плагин и размещается в следующей папке:
-<pre style="color: green; font-weight: 600;"> /bitrix/js/collected.autoloader/autoloader.plugin.js </pre>
+<pre style="color: green; font-weight: 600;"> /bitrix/js/kit.autoloader/autoloader.plugin.js </pre>
 <hr/>
 Для подключения модуля на странице, в шаблоне следует подключить <b>сгенерированный плагин</b> и вызвать его, указав следующий код:<br />
 <pre style="font-weight: 600;">
@@ -42,41 +42,41 @@ endif;
 <hr/>
 Плагин использует библиотеку JQuery. Если на вашем сайте нет подключения этой библиотеки, то в настройках модуля поставьте галочку "Подключение JQuery", и библиотека подключится автоматически.
 ';
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_GENERAL"] = "Общие настройки";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_ADDITIONAL"] = "Дополнительные настройки";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_PRELOADER"] = "Прелоадер";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_PRELOADER_DEFAULT"] = "Вы можете использовать прелоадер по умолчанию";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_PRELOADER_OWN"] = "или использовать свой (укажите путь или ссылку)";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_BUTTON_TEMPLATE"] = "Шаблон для кнопки \"Показать еще\"";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_CHECK_TEMPLATE"] = "Использовать расширенный шаблон";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_TEMPLATE_1_ELEMENT"] = "элемент";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_TEMPLATE_2_ELEMENTS"] = "элемента";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_TEMPLATE_5_ELEMENTS"] = "элементов";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_TEMPLATE_ABOUT"] = "По умолчанию шаблон будет в виде текста 
+$MESS["KIT_AUTOLOADER_OPTIONS_GENERAL"] = "Общие настройки";
+$MESS["KIT_AUTOLOADER_OPTIONS_ADDITIONAL"] = "Дополнительные настройки";
+$MESS["KIT_AUTOLOADER_OPTIONS_PRELOADER"] = "Прелоадер";
+$MESS["KIT_AUTOLOADER_OPTIONS_PRELOADER_DEFAULT"] = "Вы можете использовать прелоадер по умолчанию";
+$MESS["KIT_AUTOLOADER_OPTIONS_PRELOADER_OWN"] = "или использовать свой (укажите путь или ссылку)";
+$MESS["KIT_AUTOLOADER_OPTIONS_BUTTON_TEMPLATE"] = "Шаблон для кнопки \"Показать еще\"";
+$MESS["KIT_AUTOLOADER_OPTIONS_CHECK_TEMPLATE"] = "Использовать расширенный шаблон";
+$MESS["KIT_AUTOLOADER_OPTIONS_TEMPLATE_1_ELEMENT"] = "элемент";
+$MESS["KIT_AUTOLOADER_OPTIONS_TEMPLATE_2_ELEMENTS"] = "элемента";
+$MESS["KIT_AUTOLOADER_OPTIONS_TEMPLATE_5_ELEMENTS"] = "элементов";
+$MESS["KIT_AUTOLOADER_OPTIONS_TEMPLATE_ABOUT"] = "По умолчанию шаблон будет в виде текста 
 <pre><b>Показать еще . . .</b></pre><br />
 При необходимости можно использовать расширенный шаблон вида 
 <pre><b>Показано (кол-во) элементов из (кол-ва). Показать еще (кол-во)</b></pre>";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_SHOW_AUTOLOAD"] = "Показывать галочку \"Подгружать автоматически\"";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_SHOW_AUTOLOAD_ABOUT"] = "Если на странице будет поставлена галочка \"Подгружать автоматически\", то, при нажатии на нее, 
+$MESS["KIT_AUTOLOADER_OPTIONS_SHOW_AUTOLOAD"] = "Показывать галочку \"Подгружать автоматически\"";
+$MESS["KIT_AUTOLOADER_OPTIONS_SHOW_AUTOLOAD_ABOUT"] = "Если на странице будет поставлена галочка \"Подгружать автоматически\", то, при нажатии на нее, 
 страница будет подгружаться автоматически по скроллингу <br/>
 Вы можете изменять момент срабатывания автоматической подгрузки, для этого настройте поле \"Размер отступа автоподгрузки\".";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_AUTOLOADSIZE"] = "Размер отступа автоподгрузки";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_CHECK_COORDS_CONSOLE_LOG"] = "Выводить координаты в консоль, для настройки автопрокрутки";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_SAVE"] = "Сохранить";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_SHOW_PRELOADER_ABOUT"] = "Для прелоадера вы можете указать ссылку типа <b>http://сайт.ру/preloader/preloader.gif</b> 
+$MESS["KIT_AUTOLOADER_OPTIONS_AUTOLOADSIZE"] = "Размер отступа автоподгрузки";
+$MESS["KIT_AUTOLOADER_OPTIONS_CHECK_COORDS_CONSOLE_LOG"] = "Выводить координаты в консоль, для настройки автопрокрутки";
+$MESS["KIT_AUTOLOADER_OPTIONS_SAVE"] = "Сохранить";
+$MESS["KIT_AUTOLOADER_OPTIONS_SHOW_PRELOADER_ABOUT"] = "Для прелоадера вы можете указать ссылку типа <b>http://сайт.ру/preloader/preloader.gif</b> 
 или относительный путь на вашем сайте <b>/local/templates/main/img/preloader.gif</b>";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_SCRIPT_buttonName"] = "Показать еще . . .";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_SCRIPT_autoloadText"] = "Подгружать автоматически";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_SCRIPT_showElementsText"] = "Показано";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_SCRIPT_showElementsFrom"] = "элементов из";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_SCRIPT_downloadElementsText"] = "Загрузить еще";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_SCRIPT_downloadElementsTo"] = "элементов";
+$MESS["KIT_AUTOLOADER_OPTIONS_SCRIPT_buttonName"] = "Показать еще . . .";
+$MESS["KIT_AUTOLOADER_OPTIONS_SCRIPT_autoloadText"] = "Подгружать автоматически";
+$MESS["KIT_AUTOLOADER_OPTIONS_SCRIPT_showElementsText"] = "Показано";
+$MESS["KIT_AUTOLOADER_OPTIONS_SCRIPT_showElementsFrom"] = "элементов из";
+$MESS["KIT_AUTOLOADER_OPTIONS_SCRIPT_downloadElementsText"] = "Загрузить еще";
+$MESS["KIT_AUTOLOADER_OPTIONS_SCRIPT_downloadElementsTo"] = "элементов";
 
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_SCRIPT_textElementsFrom"] = "из";
+$MESS["KIT_AUTOLOADER_OPTIONS_SCRIPT_textElementsFrom"] = "из";
 
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_CHECK_AJAXMODE"] = "Включить режим AJAX";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_CHECK_STANDART_PAGINATION"] = "Показать стандартную постраничную навигацию";
-$MESS["COLLECTED_AUTOLOADER_OPTIONS_OWN_BUTTON_NAME"] = "Текст для ссылки 'Показать еще'";
+$MESS["KIT_AUTOLOADER_OPTIONS_CHECK_AJAXMODE"] = "Включить режим AJAX";
+$MESS["KIT_AUTOLOADER_OPTIONS_CHECK_STANDART_PAGINATION"] = "Показать стандартную постраничную навигацию";
+$MESS["KIT_AUTOLOADER_OPTIONS_OWN_BUTTON_NAME"] = "Текст для ссылки 'Показать еще'";
 
 
 ?>

@@ -1,4 +1,4 @@
-# collected.autoloader
+# kit.autoloader
 
 **Описание**
 
@@ -22,7 +22,7 @@
 
 Далее в шаблоне компонента (например, news.list) необходимо подключить плагин и осуществить его вызов:
 ```html
-<script src="bitrix/js/collected.autoloader/autoloader.plugin.js"></script>  
+<script src="bitrix/js/kit.autoloader/autoloader.plugin.js"></script>  
 <script>
 (function($){
     if ($('#wrap-news').length && $('#wrap-news font').length) {

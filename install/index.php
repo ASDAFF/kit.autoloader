@@ -4,10 +4,10 @@
  */
 
 IncludeModuleLangFile(__FILE__);
-Class collected_autoloader extends CModule
+Class kit_autoloader extends CModule
 {
-	const MODULE_ID = 'collected.autoloader';
-	var $MODULE_ID = 'collected.autoloader';
+	const MODULE_ID = 'kit.autoloader';
+	var $MODULE_ID = 'kit.autoloader';
 	var $MODULE_VERSION;
 	var $MODULE_VERSION_DATE;
 	var $MODULE_NAME;
@@ -21,22 +21,22 @@ Class collected_autoloader extends CModule
 		include(dirname(__FILE__)."/version.php");
 		$this->MODULE_VERSION = $arModuleVersion["VERSION"];
 		$this->MODULE_VERSION_DATE = $arModuleVersion["VERSION_DATE"];
-		$this->MODULE_NAME = GetMessage("collected.autoloader_MODULE_NAME");
-		$this->MODULE_DESCRIPTION = GetMessage("collected.autoloader_MODULE_DESC");
+		$this->MODULE_NAME = GetMessage("kit.autoloader_MODULE_NAME");
+		$this->MODULE_DESCRIPTION = GetMessage("kit.autoloader_MODULE_DESC");
 
-		$this->PARTNER_NAME = GetMessage("collected.autoloader_PARTNER_NAME");
-		$this->PARTNER_URI = GetMessage("collected.autoloader_PARTNER_URI");
+		$this->PARTNER_NAME = GetMessage("kit.autoloader_PARTNER_NAME");
+		$this->PARTNER_URI = GetMessage("kit.autoloader_PARTNER_URI");
 	}
 
 	function InstallDB($arParams = array())
 	{
-		RegisterModuleDependences('main', 'OnBuildGlobalMenu', self::MODULE_ID, 'CCollectedAutoloader', 'OnBuildGlobalMenu');
+		RegisterModuleDependences('main', 'OnBuildGlobalMenu', self::MODULE_ID, 'CKitAutoloader', 'OnBuildGlobalMenu');
 		return true;
 	}
 
 	function UnInstallDB($arParams = array())
 	{
-		UnRegisterModuleDependences('main', 'OnBuildGlobalMenu', self::MODULE_ID, 'CCollectedAutoloader', 'OnBuildGlobalMenu');
+		UnRegisterModuleDependences('main', 'OnBuildGlobalMenu', self::MODULE_ID, 'CKitAutoloader', 'OnBuildGlobalMenu');
 		return true;
 	}
 

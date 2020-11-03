@@ -3,7 +3,7 @@
  * Copyright (c) 28/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
-$module_id = "collected.autoloader";
+$module_id = "kit.autoloader";
 CJSCore::Init(array("jquery"));
 $RIGHT = $APPLICATION->GetGroupRight($module_id);
 if ($RIGHT >= "R") :
@@ -12,19 +12,19 @@ if ($RIGHT >= "R") :
     IncludeModuleLangFile(__FILE__);
 
     $arAllOptions = array(
-        'checkConnectJquery' => array("checkConnectJquery", GetMessage("COLLECTED_AUTOLOADER_OPTIONS_CONNECT_JQUERY"), array("checkbox")),
-        'checkAutoload' => array("checkAutoload", GetMessage('COLLECTED_AUTOLOADER_OPTIONS_SHOW_AUTOLOAD'), array("checkbox")),
-        'checkPreloader' => array("checkPreloader", GetMessage('COLLECTED_AUTOLOADER_OPTIONS_PRELOADER_OWN'), array("checkbox")),
-        'ownPreloader' => array("ownPreloader", GetMessage("COLLECTED_AUTOLOADER_OPTIONS_PRELOADER_OWN"), array("text", 255)),
-        'checkTemplate' => array("checkTemplate", GetMessage('COLLECTED_AUTOLOADER_OPTIONS_CHECK_TEMPLATE'), array("checkbox")),
-        'tplElement1' => array("tplElement1", GetMessage("COLLECTED_AUTOLOADER_OPTIONS_TEMPLATE_1_ELEMENT"), array("text", 255)),
-        'tplElement2' => array("tplElement2", GetMessage("COLLECTED_AUTOLOADER_OPTIONS_TEMPLATE_2_ELEMENTS"), array("text", 255)),
-        'tplElement5' => array("tplElement5", GetMessage("COLLECTED_AUTOLOADER_OPTIONS_TEMPLATE_5_ELEMENTS"), array("text", 255)),
-        'autoloadSize' => array("autoloadSize", GetMessage("COLLECTED_AUTOLOADER_OPTIONS_AUTOLOADSIZE"), array("text", 10)),
-        'checkCoordsConsoleLog' => array("checkCoordsConsoleLog", GetMessage('COLLECTED_AUTOLOADER_OPTIONS_CHECK_COORDS_CONSOLE_LOG'), array("checkbox")),
-        'checkAjaxMode' => array("checkAjaxMode", GetMessage('COLLECTED_AUTOLOADER_OPTIONS_CHECK_AJAXMODE'), array("checkbox")),
-        'checkStandartPagination' => array("checkStandartPagination", GetMessage('COLLECTED_AUTOLOADER_OPTIONS_CHECK_STANDART_PAGINATION'), array("checkbox")),
-        'ownButtonName' => array("ownButtonName", GetMessage("COLLECTED_AUTOLOADER_OPTIONS_OWN_BUTTON_NAME"), array("text", 255)),
+        'checkConnectJquery' => array("checkConnectJquery", GetMessage("KIT_AUTOLOADER_OPTIONS_CONNECT_JQUERY"), array("checkbox")),
+        'checkAutoload' => array("checkAutoload", GetMessage('KIT_AUTOLOADER_OPTIONS_SHOW_AUTOLOAD'), array("checkbox")),
+        'checkPreloader' => array("checkPreloader", GetMessage('KIT_AUTOLOADER_OPTIONS_PRELOADER_OWN'), array("checkbox")),
+        'ownPreloader' => array("ownPreloader", GetMessage("KIT_AUTOLOADER_OPTIONS_PRELOADER_OWN"), array("text", 255)),
+        'checkTemplate' => array("checkTemplate", GetMessage('KIT_AUTOLOADER_OPTIONS_CHECK_TEMPLATE'), array("checkbox")),
+        'tplElement1' => array("tplElement1", GetMessage("KIT_AUTOLOADER_OPTIONS_TEMPLATE_1_ELEMENT"), array("text", 255)),
+        'tplElement2' => array("tplElement2", GetMessage("KIT_AUTOLOADER_OPTIONS_TEMPLATE_2_ELEMENTS"), array("text", 255)),
+        'tplElement5' => array("tplElement5", GetMessage("KIT_AUTOLOADER_OPTIONS_TEMPLATE_5_ELEMENTS"), array("text", 255)),
+        'autoloadSize' => array("autoloadSize", GetMessage("KIT_AUTOLOADER_OPTIONS_AUTOLOADSIZE"), array("text", 10)),
+        'checkCoordsConsoleLog' => array("checkCoordsConsoleLog", GetMessage('KIT_AUTOLOADER_OPTIONS_CHECK_COORDS_CONSOLE_LOG'), array("checkbox")),
+        'checkAjaxMode' => array("checkAjaxMode", GetMessage('KIT_AUTOLOADER_OPTIONS_CHECK_AJAXMODE'), array("checkbox")),
+        'checkStandartPagination' => array("checkStandartPagination", GetMessage('KIT_AUTOLOADER_OPTIONS_CHECK_STANDART_PAGINATION'), array("checkbox")),
+        'ownButtonName' => array("ownButtonName", GetMessage("KIT_AUTOLOADER_OPTIONS_OWN_BUTTON_NAME"), array("text", 255)),
 
 
     );
@@ -58,10 +58,10 @@ if ($REQUEST_METHOD == 'POST')
         COption::SetOptionString($module_id, $name, $val, $arOption[1]);
     }
     if ($_REQUEST['form1']['checkConnectJquery'] == "Y" AND $_REQUEST['form1']['checkConnectJquery'] != $value['checkConnectJquery']){
-        RegisterModuleDependences("main", "OnPageStart", $module_id, "CCollectedAutoloader", "connectJquery", 1);
+        RegisterModuleDependences("main", "OnPageStart", $module_id, "CKitAutoloader", "connectJquery", 1);
     }
     if ($_REQUEST['form1']['checkConnectJquery'] == "N" AND $_REQUEST['form1']['checkConnectJquery'] != $value['checkConnectJquery']){
-        UnRegisterModuleDependences("main", "OnPageStart", $module_id, "CCollectedAutoloader", "connectJquery", 1);
+        UnRegisterModuleDependences("main", "OnPageStart", $module_id, "CKitAutoloader", "connectJquery", 1);
     }
     if ($_REQUEST['form1']['checkPreloader'] == "Y"){
         $loader = $_REQUEST['form1']['ownPreloader'];
@@ -75,7 +75,7 @@ if ($REQUEST_METHOD == 'POST')
     }
 
     if (!$_REQUEST['form1']['ownButtonName']){
-        $_REQUEST['form1']['ownButtonName'] = GetMessage("COLLECTED_AUTOLOADER_OPTIONS_SCRIPT_buttonName");
+        $_REQUEST['form1']['ownButtonName'] = GetMessage("KIT_AUTOLOADER_OPTIONS_SCRIPT_buttonName");
     }
     
 
@@ -104,12 +104,12 @@ if ($REQUEST_METHOD == 'POST')
     buttonExtraClass: '',
     buttonLoader: '".$loader."',
     
-    autoloadText: '".GetMessage("COLLECTED_AUTOLOADER_OPTIONS_SCRIPT_autoloadText")."',
-    showElementsText: '".GetMessage("COLLECTED_AUTOLOADER_OPTIONS_SCRIPT_showElementsText")."',
-    showElementsFrom: '".GetMessage("COLLECTED_AUTOLOADER_OPTIONS_SCRIPT_showElementsFrom")."',
-    downloadElementsText: '".GetMessage("COLLECTED_AUTOLOADER_OPTIONS_SCRIPT_downloadElementsText")."',
-    downloadElementsTo: '".GetMessage("COLLECTED_AUTOLOADER_OPTIONS_SCRIPT_downloadElementsTo")."',
-    textElementsFrom: '".GetMessage("COLLECTED_AUTOLOADER_OPTIONS_SCRIPT_textElementsFrom")."',
+    autoloadText: '".GetMessage("KIT_AUTOLOADER_OPTIONS_SCRIPT_autoloadText")."',
+    showElementsText: '".GetMessage("KIT_AUTOLOADER_OPTIONS_SCRIPT_showElementsText")."',
+    showElementsFrom: '".GetMessage("KIT_AUTOLOADER_OPTIONS_SCRIPT_showElementsFrom")."',
+    downloadElementsText: '".GetMessage("KIT_AUTOLOADER_OPTIONS_SCRIPT_downloadElementsText")."',
+    downloadElementsTo: '".GetMessage("KIT_AUTOLOADER_OPTIONS_SCRIPT_downloadElementsTo")."',
+    textElementsFrom: '".GetMessage("KIT_AUTOLOADER_OPTIONS_SCRIPT_textElementsFrom")."',
 
     autoAppend: '".true."',
 
@@ -141,7 +141,7 @@ if ($REQUEST_METHOD == 'POST')
 
         ?>
         <tr class=heading>
-            <td colspan=2><?=GetMessage("COLLECTED_AUTOLOADER_OPTIONS_GENERAL")?></td>
+            <td colspan=2><?=GetMessage("KIT_AUTOLOADER_OPTIONS_GENERAL")?></td>
         </tr>
 
         <tr>
@@ -204,14 +204,14 @@ if ($REQUEST_METHOD == 'POST')
         <tr>
             <td valign="top" width="100%" colspan="2" align="center">
                 <?=BeginNote();?>
-                <?=GetMessage("COLLECTED_AUTOLOADER_OPTIONS_SHOW_AUTOLOAD_ABOUT");?>
+                <?=GetMessage("KIT_AUTOLOADER_OPTIONS_SHOW_AUTOLOAD_ABOUT");?>
                 <?=EndNote();?>
             </td>
         </tr>
 
 
         <tr class=heading>
-            <td colspan=2><?=GetMessage("COLLECTED_AUTOLOADER_OPTIONS_ADDITIONAL")?></td>
+            <td colspan=2><?=GetMessage("KIT_AUTOLOADER_OPTIONS_ADDITIONAL")?></td>
         </tr>
 
         <tr>
@@ -249,12 +249,12 @@ if ($REQUEST_METHOD == 'POST')
 
 
         <tr class=heading>
-            <td colspan=2><?=GetMessage("COLLECTED_AUTOLOADER_OPTIONS_PRELOADER")?></td>
+            <td colspan=2><?=GetMessage("KIT_AUTOLOADER_OPTIONS_PRELOADER")?></td>
         </tr>
 
         <tr>
             <td width="40%" nowrap>
-                <label><?=GetMessage('COLLECTED_AUTOLOADER_OPTIONS_PRELOADER_DEFAULT')?> : </label>
+                <label><?=GetMessage('KIT_AUTOLOADER_OPTIONS_PRELOADER_DEFAULT')?> : </label>
             </td>
             <td width="60%">
                 <img src="<?=$defaultLoader?>"/>
@@ -291,13 +291,13 @@ if ($REQUEST_METHOD == 'POST')
         <tr>
             <td valign="top" width="100%" colspan="2" align="center">
                 <?=BeginNote();?>
-                <?=GetMessage("COLLECTED_AUTOLOADER_OPTIONS_SHOW_PRELOADER_ABOUT");?>
+                <?=GetMessage("KIT_AUTOLOADER_OPTIONS_SHOW_PRELOADER_ABOUT");?>
                 <?=EndNote();?>
             </td>
         </tr>
 
         <tr class=heading>
-            <td colspan=2><?=GetMessage("COLLECTED_AUTOLOADER_OPTIONS_BUTTON_TEMPLATE")?></td>
+            <td colspan=2><?=GetMessage("KIT_AUTOLOADER_OPTIONS_BUTTON_TEMPLATE")?></td>
         </tr>
 
         <tr>
@@ -360,7 +360,7 @@ if ($REQUEST_METHOD == 'POST')
         <tr>
             <td valign="top" width="100%" colspan="2" align="center">
                 <?=BeginNote();?>
-                <?=GetMessage("COLLECTED_AUTOLOADER_OPTIONS_TEMPLATE_ABOUT");?>
+                <?=GetMessage("KIT_AUTOLOADER_OPTIONS_TEMPLATE_ABOUT");?>
                 <?=EndNote();?>
             </td>
         </tr>          
@@ -369,7 +369,7 @@ if ($REQUEST_METHOD == 'POST')
     $tabControl->Buttons();
     ?>
 
-    <input class="adm-btn-save" type="submit" name="save" value="<?=GetMessage("COLLECTED_AUTOLOADER_OPTIONS_SAVE");?>" title="<?=GetMessage("COLLECTED_AUTOLOADER_OPTIONS_SAVE");?>" />&nbsp;
+    <input class="adm-btn-save" type="submit" name="save" value="<?=GetMessage("KIT_AUTOLOADER_OPTIONS_SAVE");?>" title="<?=GetMessage("KIT_AUTOLOADER_OPTIONS_SAVE");?>" />&nbsp;
 
     <?php
     $tabControl->End();
@@ -379,7 +379,7 @@ if ($REQUEST_METHOD == 'POST')
     </form>
 
     <?=BeginNote();?>
-        <?=GetMessage("COLLECTED_AUTOLOADER_OPTIONS_HOW_TO_LAUNCH");?>
+        <?=GetMessage("KIT_AUTOLOADER_OPTIONS_HOW_TO_LAUNCH");?>
     <?=EndNote();?>
 
 <? endif; ?>
